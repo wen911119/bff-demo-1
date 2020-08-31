@@ -1,0 +1,36 @@
+{
+  "scripts": {
+    "start": "babel-node src/index.js",
+    "dev": "nodemon --exec babel-node src/index.js",
+    "build": "babel src --out-dir dist",
+    "serve": "node dist/index.js",
+    "debug": "babel-node test.js",
+    "lint": "eslint ./ --cache --ignore-pattern .gitignore"
+  },
+  "dependencies": {
+    "@ruiyun/fastapi": "^1.0.9"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "nodemon": "^2.0.2",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.19.1"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "name": "bff-demo-1",
+  "version": "1.0.0"
+}
